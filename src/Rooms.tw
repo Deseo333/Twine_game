@@ -1,7 +1,6 @@
 :: 起始房间
 
 <<set $currentRoom = "起始房间">>
-<<include "Sidebar">>
 
 扣除血量
 

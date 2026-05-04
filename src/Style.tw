@@ -1,27 +1,19 @@
+
+:: StoryStylesheet [stylesheet]
+
 :: StoryStylesheet [stylesheet]
 
 #sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  background: #111;
-  color: white;
-  padding: 15px;
-  border-right: 2px solid #555;
-  box-sizing: border-box;
+  display: none;
 }
 
-#passages {
-  margin-left: 280px;
+.my-sidebar {
+  padding: 10px;
 }
 
 .image-area img {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
-  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .bag-slot {
@@ -30,21 +22,15 @@
   margin: 6px;
 }
 
-.profile-img {
-  width: 180px;
-}
-#story {
-  margin-left: 530px !important;
+#story,
+#ui-bar.stowed ~ #story {
+  margin-left: 0 !important;
 }
 
-#ui-bar.stowed ~ #story {
-  margin-left: 530px !important;
+#passages {
+  margin-left: 560px !important;
 }
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: var(--ui-bar-width, 280px);
-  width: 250px;
-  height: 100vh;
-  overflow-y: auto;
+
+.profile-img {
+  width: 180px;
 }

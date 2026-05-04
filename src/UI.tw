@@ -1,6 +1,6 @@
-:: Sidebar [nobr]
+:: StoryCaption
 
-<div id="sidebar">
+<div class="my-sidebar">
 
   <div class="image-area">
     <img src="images/portrait.png" alt="portrait">

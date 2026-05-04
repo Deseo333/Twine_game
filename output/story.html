@@ -101,27 +101,16 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<!-- UUID://8B2B2F6E-4C2D-4B3D-9E1F-7A8C6D5E4F01// --><tw-storydata name="测试游戏" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="8B2B2F6E-4C2D-4B3D-9E1F-7A8C6D5E4F01" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  background: #111;
-  color: white;
-  padding: 15px;
-  border-right: 2px solid #555;
-  box-sizing: border-box;
+  display: none;
 }
 
-#passages {
-  margin-left: 280px;
+.my-sidebar {
+  padding: 10px;
 }
 
 .image-area img {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
-  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .bag-slot {
@@ -130,23 +119,17 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
   margin: 6px;
 }
 
-.profile-img {
-  width: 180px;
-}
-#story {
-  margin-left: 530px !important;
+#story,
+#ui-bar.stowed ~ #story {
+  margin-left: 0 !important;
 }
 
-#ui-bar.stowed ~ #story {
-  margin-left: 530px !important;
+#passages {
+  margin-left: 560px !important;
 }
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: var(--ui-bar-width, 280px);
-  width: 250px;
-  height: 100vh;
-  overflow-y: auto;
+
+.profile-img {
+  width: 180px;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="背包" tags="" position="100,100" size="100,100">&lt;&lt;include &quot;Sidebar&quot;&gt;&gt;
 
 &lt;h2&gt;背包&lt;/h2&gt;
@@ -182,7 +165,6 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 &lt;&lt;link &quot;返回&quot;&gt;&gt;
   &lt;&lt;goto $lastRoom&gt;&gt;
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="起始房间" tags="" position="225,100" size="100,100">&lt;&lt;set $currentRoom = &quot;起始房间&quot;&gt;&gt;
-&lt;&lt;include &quot;Sidebar&quot;&gt;&gt;
 
 扣除血量
 
@@ -262,7 +244,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 &lt;&lt;set $zjrUnlocked = false&gt;&gt;
 &lt;&lt;set $smUnlocked = false&gt;&gt;
 
-&lt;&lt;set $currentRoom = &quot;起始房间&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Sidebar" tags="nobr" position="475,100" size="100,100">&lt;div id=&quot;sidebar&quot;&gt;
+&lt;&lt;set $currentRoom = &quot;起始房间&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="" position="475,100" size="100,100">&lt;div class=&quot;my-sidebar&quot;&gt;
 
   &lt;div class=&quot;image-area&quot;&gt;
     &lt;img src=&quot;images/portrait.png&quot; alt=&quot;portrait&quot;&gt;
