@@ -1,0 +1,23 @@
+:: StoryInit
+
+<<set $maxHp = 10>>
+<<set $hp = 10>>
+<<set $trust = 0>>
+<<set $quest1 = false>>
+
+<<set $bag = []>>
+<<set $bagMax = 10>>
+
+<<set $hasKey = false>>
+<<set $hasKnife = false>>
+<<set $hasNote = false>>
+
+<<set $profilePage = 1>>
+
+<<set $gyUnlocked = false>>
+<<set $zbUnlocked = false>>
+<<set $hlyUnlocked = false>>
+<<set $zjrUnlocked = false>>
+<<set $smUnlocked = false>>
+
+<<set $currentRoom = "起始房间">>

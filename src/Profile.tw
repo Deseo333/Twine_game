@@ -1,0 +1,75 @@
+<div class="archive-page">
+<h2>人物档案</h2>
+<<if $profilePage is 1>>
+            <p><b>林雨</b></p>
+            <p>身份：？？？</p>
+            <p>简介：一个看起来冷静但难以接近的人。</p>
+<<elseif $profilePage is 2>>
+    <<if $zbUnlocked>><img src="images/.png" class="profile-img">
+        <p><b>周默</b></p>
+        <p>身份：调查员</p>
+        <p>简介：总是一副什么都知道的样子。</p>
+    <<else>>
+            <p><b>？？？</b></p>
+            <p>该人物尚未解锁。</p>
+    <</if>>
+<<elseif $profilePage is 3>>
+    <<if $zjrUnlocked>><img src="images/linyu.png" class="profile-img">
+            <p><b>沈河</b></p>
+            <p>身份：医生</p>
+            <p>简介：说话温和，但让人捉摸不透。</p>
+    <<else>>
+            <p><b>？？？</b></p>
+            <p>该人物尚未解锁。</p>
+    <</if>>
+<<elseif $profilePage is 4>>
+	<<if $smUnlocked>><img src="images/linyu.png" class="profile-img">
+    	<p><b>沈河</b></p>
+            <p>身份：医生</p>
+            <p>简介：说话温和，但让人捉摸不透。</p>
+    <<else>>
+            <p><b>？？？</b></p>
+            <p>该人物尚未解锁。</p>
+	<</if>>
+<<elseif $profilePage is 5>>
+	<<if $gyUnlocked>><img src="images/linyu.png" class="profile-img">
+    	<p><b>沈河</b></p>
+            <p>身份：医生</p>
+            <p>简介：说话温和，但让人捉摸不透。</p>
+    <<else>>
+            <p><b>？？？</b></p>
+            <p>该人物尚未解锁。</p>
+	<</if>>
+<<elseif $profilePage is 6>>
+	<<if $hlyUnlocked>><img src="images/linyu.png" class="profile-img">
+    	<p><b>沈河</b></p>
+            <p>身份：医生</p>
+            <p>简介：说话温和，但让人捉摸不透。</p>
+    <<else>>
+            <p><b>？？？</b></p>
+            <p>该人物尚未解锁。</p>
+	<</if>>
+<</if>>
+
+<div class="profile-nav">
+    <div class="page-text">
+        第 <<= $profilePage>> / 6 页
+    </div>
+    <div class="nav-buttons">
+        <<if $profilePage > 1>>
+            <<link "上一页">>
+                <<set $profilePage -= 1>>
+                <<goto "人物档案">>
+            <</link>>
+        <</if>>
+        <<if $profilePage < 6>>
+            <<link "下一页">>
+                <<set $profilePage += 1>>
+                <<goto "人物档案">>
+            <</link>>
+        <</if>>
+    </div>
+</div>
+<<link "返回">>
+    <<goto $currentRoom>>
+<</link>>

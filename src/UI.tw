@@ -1,0 +1,33 @@
+:: Sidebar [nobr]
+
+<div id="sidebar">
+
+  <div class="image-area">
+    <img src="images/portrait.png" alt="portrait">
+  </div>
+
+  <<if $hp >= $maxHp * 0.75>>
+    <p>状态：<span style="color:#4CAF50;">良好</span></p>
+  <<elseif $hp >= $maxHp * 0.5>>
+    <p>状态：<span style="color:#FFC107;">一般</span></p>
+  <<elseif $hp >= $maxHp * 0.25>>
+    <p>状态：<span style="color:#FF9800;">虚弱</span></p>
+  <<elseif $hp > 0>>
+    <p>状态：<span style="color:#F44336;">濒死</span></p>
+  <<else>>
+    <p>状态：<span style="color:#9E9E9E;">死亡</span></p>
+  <</if>>
+
+  <div class="profile-box">
+    <<link "人物档案" "人物档案">>
+      <<set $profilePage = 1>>
+    <</link>>
+  </div>
+
+  <div class="bag-button">
+    <<link "背包" "背包">>
+    <</link>>
+    (<<= $bag.length>>/10)
+  </div>
+
+</div>

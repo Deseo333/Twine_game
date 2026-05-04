@@ -1,0 +1,32 @@
+<h2>背包</h2>
+
+<div class="bag-page">
+  <<set _bagMax = 10>>
+
+  <<for _i = 0; _i < _bagMax; _i++>>
+    <div class="bag-slot">
+      <<if _i < $bag.length>>
+        <<set _item = $bag[_i]>>
+
+        <<if _item is "钥匙">>
+          [[钥匙->物品_钥匙]]
+        <<elseif _item is "小刀">>
+          [[小刀->物品_小刀]]
+        <<elseif _item is "纸条">>
+          [[纸条->物品_纸条]]
+        <<else>>
+          <<= _item>>
+        <</if>>
+
+      <<else>>
+        <span class="empty-slot">— 空 —</span>
+      <</if>>
+    </div>
+  <</for>>
+</div>
+
+<br>
+
+<<link "返回">>
+  <<goto $lastRoom>>
+<</link>>

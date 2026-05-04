@@ -1,0 +1,32 @@
+:: StoryStylesheet [stylesheet]
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  color: white;
+  padding: 15px;
+}
+
+#passages {
+  margin-left: 280px;
+}
+
+.image-area img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.bag-slot {
+  border: 1px solid #888;
+  padding: 10px;
+  margin: 6px;
+}
+
+.profile-img {
+  width: 180px;
+}

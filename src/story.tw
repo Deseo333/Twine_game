@@ -1,0 +1,10 @@
+:: StoryTitle
+测试游戏
+
+:: StoryData
+{
+  "ifid": "8B2B2F6E-4C2D-4B3D-9E1F-7A8C6D5E4F01",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "起始房间"
+}

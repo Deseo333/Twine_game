@@ -1,0 +1,64 @@
+:: 起始房间
+
+<<set $currentRoom = "起始房间">>
+<<include "Sidebar">>
+
+扣除血量
+
+<<button "扣1点血">>
+  <<set $hp -= 1>>
+  <<goto "起始房间">>
+<</button>>
+
+<<set $zbUnlocked = true>>
+
+<div class="room-text">
+  <p>你醒来时，发现桌上放着三样东西。</p>
+  <p>你要拿起什么？</p>
+
+  <<if !$hasKey>>
+    <p>
+      <<link "拿起钥匙">>
+        <<if $bag.length < 10>>
+          <<set $bag.push("钥匙")>>
+          <<set $hasKey = true>>
+          <<goto "起始房间">>
+        <<else>>
+          背包已满。
+        <</if>>
+      <</link>>
+    </p>
+  <</if>>
+
+  <<if !$hasKnife>>
+    <p>
+      <<link "拿起小刀">>
+        <<if $bag.length < 10>>
+          <<set $bag.push("小刀")>>
+          <<set $hasKnife = true>>
+          <<goto "起始房间">>
+        <<else>>
+          背包已满。
+        <</if>>
+      <</link>>
+    </p>
+  <</if>>
+
+  <<if !$hasNote>>
+    <p>
+      <<link "拿起纸条">>
+        <<if $bag.length < 10>>
+          <<set $bag.push("纸条")>>
+          <<set $hasNote = true>>
+          <<goto "起始房间">>
+        <<else>>
+          背包已满。
+        <</if>>
+      <</link>>
+    </p>
+  <</if>>
+
+  <<if $hasKey and $hasKnife and $hasNote>>
+    <p>桌上已经没有别的东西了。</p>
+  <</if>>
+</div>
