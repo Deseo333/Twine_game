@@ -58,6 +58,6 @@
   <</if>>
 
   <<if $hasKey and $hasKnife and $hasNote>>
-    <p>桌上已经没有东西了。</p>
+    <p>桌上已经没有别的东西了。</p>
   <</if>>
 </div>
