@@ -100,34 +100,53 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://8B2B2F6E-4C2D-4B3D-9E1F-7A8C6D5E4F01// --><tw-storydata name="测试游戏" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="8B2B2F6E-4C2D-4B3D-9E1F-7A8C6D5E4F01" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 原生 sidebar（左边） */
-#ui-bar {
-  width: 300px;
-}
-
-/* 你的 sidebar（往右挪） */
-#sidebar {
+	<!-- UUID://8B2B2F6E-4C2D-4B3D-9E1F-7A8C6D5E4F01// --><tw-storydata name="测试游戏" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="8B2B2F6E-4C2D-4B3D-9E1F-7A8C6D5E4F01" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#sidebar {
   position: fixed;
-  left: 300px;   /* 👈 关键：从 ui-bar 右边开始 */
+  left: 0;
   top: 0;
   width: 250px;
-  height: 100vh;
+  height: 100%;
   background: #111;
   color: white;
   padding: 15px;
   border-right: 2px solid #555;
   box-sizing: border-box;
-  overflow-y: auto;
 }
 
-/* 主内容整体往右 */
-#story {
-  margin-left: 560px;  /* 300 + 250 */
-}
-
-/* passage 再稍微调 */
 #passages {
-  margin-left: 0;
+  margin-left: 280px;
+}
+
+.image-area img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.bag-slot {
+  border: 1px solid #888;
+  padding: 10px;
+  margin: 6px;
+}
+
+.profile-img {
+  width: 180px;
+}
+#story {
+  margin-left: 530px !important;
+}
+
+#ui-bar.stowed ~ #story {
+  margin-left: 530px !important;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: var(--ui-bar-width, 280px);
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="背包" tags="" position="100,100" size="100,100">&lt;&lt;include &quot;Sidebar&quot;&gt;&gt;
 
 &lt;h2&gt;背包&lt;/h2&gt;

@@ -1,31 +1,50 @@
 :: StoryStylesheet [stylesheet]
 
-/* 原生 sidebar（左边） */
-#ui-bar {
-  width: 300px;
-}
-
-/* 你的 sidebar（往右挪） */
 #sidebar {
   position: fixed;
-  left: 300px;   /* 👈 关键：从 ui-bar 右边开始 */
+  left: 0;
   top: 0;
   width: 250px;
-  height: 100vh;
+  height: 100%;
   background: #111;
   color: white;
   padding: 15px;
   border-right: 2px solid #555;
   box-sizing: border-box;
-  overflow-y: auto;
 }
 
-/* 主内容整体往右 */
-#story {
-  margin-left: 560px;  /* 300 + 250 */
-}
-
-/* passage 再稍微调 */
 #passages {
-  margin-left: 0;
+  margin-left: 280px;
+}
+
+.image-area img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.bag-slot {
+  border: 1px solid #888;
+  padding: 10px;
+  margin: 6px;
+}
+
+.profile-img {
+  width: 180px;
+}
+#story {
+  margin-left: 530px !important;
+}
+
+#ui-bar.stowed ~ #story {
+  margin-left: 530px !important;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: var(--ui-bar-width, 280px);
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
 }
